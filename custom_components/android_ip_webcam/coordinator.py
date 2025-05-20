@@ -36,7 +36,7 @@ class AndroidIPCamDataUpdateCoordinator(DataUpdateCoordinator[None]):
             self.hass,
             _LOGGER,
             name=f"{DOMAIN} {config_entry.data[CONF_HOST]}",
-            update_interval=timedelta(seconds=10),
+            update_interval=timedelta(seconds=2),
         )
 
     async def _async_update_data(self) -> None:
